@@ -5,10 +5,11 @@
 # 0 <= nums[i] < nums.length
 # The elements in nums are distinct.
 
+# O(n)
 class Solution:
     def buildArray(self, nums: list[int]) -> list[int]:
         ans = list[int]()
-        for i in nums:
+        for i in nums: # loops every element and consider value as index to get actual value
             ans.append(nums[i])
         return ans
 

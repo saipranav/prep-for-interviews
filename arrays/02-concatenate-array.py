@@ -4,6 +4,7 @@
 # 1 <= n <= 1000
 # 1 <= nums[i] <= 1000
 
+# this seems the optimized version but nope, uses little bit more memory than next solution same time
 class Solution1:
     def getConcatenation(self, nums: list[int]) -> list[int]:
         return nums + nums
@@ -12,6 +13,7 @@ print(Solution1().getConcatenation(nums=[1,2,3]))
 
 
 # optimized - memory allocation is done at start
+# O(n)
 class Solution2:
     def getConcatenation(self, nums: list[int]) -> list[int]:
         l = len(nums)
