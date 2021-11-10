@@ -5,13 +5,19 @@
 # -10^6 <= nums[i] <= 10^6
 
 # O(n)
+# readable and way faster, consumes less memory
 class Solution:
     def runningSum(self, nums: list[int]) -> list[int]:
         s = 0
         r = []
-        for i in range(len(nums)):
-            s = s + nums[i]
+        for i in nums:
+            s = s + i
             r.append(s)
+
+        # for i in range(len(nums)): # this for loop runs slower
+        #     s = s + nums[i]
+        #     r.append(s)
+
         return r
 print(Solution().runningSum([1,2,3,4]))
 
