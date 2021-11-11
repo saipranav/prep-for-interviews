@@ -8,6 +8,10 @@
 
 # O(n)
 # This solution works perfectly because from constraints we know the numbers in array are not going to be negative so we can initialize l1 with -1
+# Tricky test cases:
+# [1]
+# [1, 0]
+# [0, 1]
 class Solution:
     def dominantIndex(self, nums: list[int]) -> int:
         idx = l1 = l2 = -1
@@ -21,3 +25,5 @@ class Solution:
             return idx
         else:
             return -1
+print(Solution().dominantIndex([1,2,3,4])) # -1
+print(Solution().dominantIndex([1,0])) # 0
