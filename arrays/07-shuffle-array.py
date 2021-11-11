@@ -26,30 +26,28 @@ class Solution:
 
 print(Solution().shuffle([1,2,3,4], 2)) # [1,3,2,4]
 
-# O(n)
-# O(1) almost constant memory used like 2 element of queue
+# time: O(n)
+# space: O(n) at most n/2 elements on queue
 # In place shuffle
 class Solution1:
-    def shuffle(self, nums: list[int], n: int) -> list[int]:
-        x = 0
-        y = n
-        q = []
+    def shuffle(self, nums: list[int], n: int) -> list[int]:  
+        y = n    # second pointer
+        q = []   # empty queue
 
-        for i in range(2*n):
-            if i == 0 or i == 2*n-1:
-                x = x + 1
+        for x in range(2*n):           # first pointer
+
+            if x == 0 or x == 2*n-1:   # don't disturb first and last element
                 continue
-                
-            if i % 2 == 0: # even, get from queue
-                q.append(nums[x])
+
+            q.append(nums[x])          # placing current element in queue because we are replacing first pointer `nums[x]` in both cases below so we need somewhere to temporarily store
+			
+            if x % 2 == 0:             # even index, get first element from queue
                 nums[x]=q.pop(0)
-                
-            elif i % 2 != 0: # odd, swap
-                q.append(nums[x])
+            else:                      # odd index, swap element with second pointer and increment second pointer
                 nums[x]=nums[y]
                 y = y + 1
 
-            x = x + 1
+
         return nums
 print(Solution1().shuffle([2,5,1,3,4,7], 3)) # [2,3,5,4,1,7]
 
