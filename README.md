@@ -1,9 +1,10 @@
 # prep-for-interviews
 interview questions | coding categorized | system level 
 
-## Math concepts
 ---
-### To store 2 numbers in same place
+# Math concepts
+
+## To store 2 numbers in same place
 If you want to store 2 numbers n1, n2 in to same number
 
 consider a larger number c thats greater than n1 and n2
@@ -24,7 +25,7 @@ cal n2 = v % c = 45 % 10 = 5
 ```
 ---
 
-### To find number of unique combinations of pairs given an array
+## To find number of unique combinations of pairs given an array
 ```
 n               n!
  C     =   -------------
@@ -45,6 +46,14 @@ In python
     for comb in itertools.combinations([1, 2, 3, 4, 5], 2):
         print(comb)
 
-### Sum of n numbers starting from 0 .. 1 .. N-1 .. N
+## Sum of n numbers starting from 0 .. 1 .. N-1 .. N
 
 Sum(n) = ( N * (N-1) ) / 2
+
+---
+
+# Python nuances
+
+## string is immutable
+convert to list so that we can assign values by index
+l = list(s) then we can do l[10] = "s"
