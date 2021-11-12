@@ -18,6 +18,7 @@ print(Solution().smallerNumbersThanCurrent([8,1,2,2,3])) # [4,0,1,1,3]
 
 # O(nlogn) because of efficient sorting
 # O(n) space
+# way more efficient in terms of runtime
 class Solution1:
     def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
         r = []
@@ -35,3 +36,4 @@ class Solution1:
             r.append(m[v])
 
         return r
+print(Solution1().smallerNumbersThanCurrent([8,1,2,2,3])) # [4,0,1,1,3]
