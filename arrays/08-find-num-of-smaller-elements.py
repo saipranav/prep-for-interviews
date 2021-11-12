@@ -19,6 +19,7 @@ print(Solution().smallerNumbersThanCurrent([8,1,2,2,3])) # [4,0,1,1,3]
 # O(nlogn) because of efficient sorting
 # O(n) space
 # way more efficient in terms of runtime
+# sort the list and get the index of each element, it gives the required info of how many elements are smaller than current element 
 class Solution1:
     def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
         r = []
@@ -32,7 +33,7 @@ class Solution1:
             if v not in m:
                 m[v] = i
 
-        for i, v in enumerate(nums):
+        for v in nums:
             r.append(m[v])
 
         return r
