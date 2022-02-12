@@ -8,7 +8,7 @@
 #           given 1 element is fixed, take the complement as temporary target for two sum so it overall adds to zero
 #           two sum is using two pointer, left from fixed element index + 1, right to right most. If sum of these two more than complement target then decrement right, if sum of these two are less than complement then increment left, if sum is same as complement target then we found triplet. 
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
         nums.sort()
         res = set()
 
@@ -19,7 +19,7 @@ class Solution:
         
         return res
         
-    def twoSum(self, nums: List[int], i: int, res: Set[List[int]]):
+    def twoSum(self, nums: list[int], i: int, res: Set[list[int]]):
         tSum = -1 * nums[i]
         l = i + 1
         r = len(nums) - 1
@@ -37,7 +37,7 @@ class Solution:
 # Output   [[-2,-1,3]]
 # Expected [[-2,-1,3],[-2,0,2],[-1,0,1]]
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
         m = {}
         r = []
         
@@ -88,7 +88,7 @@ class Solution:
 
 
 class Solution1:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
         m = {}
         r = []
         

@@ -4,7 +4,7 @@
 # Time: O(nlogn) sorting
 # Space: O(n) depending on sorting
 class Solution:
-    def twoSumLessThanK(self, nums: List[int], k: int) -> int:
+    def twoSumLessThanK(self, nums: list[int], k: int) -> int:
         maxSum = -1
         nums.sort() # make possible to use two pointer approach
         
