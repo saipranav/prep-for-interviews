@@ -57,3 +57,9 @@ Sum(n) = ( N * (N-1) ) / 2
 ## string is immutable
 convert to list so that we can assign values by index
 l = list(s) then we can do l[10] = "s"
+
+## infinite
+```
+diff = float('inf')
+```
+will make diff a very big number so that can be used while cold starting comparisons
