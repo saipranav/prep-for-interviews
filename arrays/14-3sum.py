@@ -19,7 +19,7 @@ class Solution:
         
         return res
         
-    def twoSum(self, nums: list[int], i: int, res: Set[list[int]]):
+    def twoSum(self, nums: list[int], i: int, res: set[list[int]]):
         tSum = -1 * nums[i]
         l = i + 1
         r = len(nums) - 1
